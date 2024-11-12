@@ -1,0 +1,13 @@
+{
+	"cwe": "cwe-787",
+	"query": "Out-of-bounds Write",
+	"codeql_check": "codeql-home\/codeql-repo\/cpp\/ql\/src\/Likely\\ Bugs\/Memory\\ Management\/PotentialBufferOverflow.ql",
+	"file_path": "copilot-cwe-scenarios-dataset\/experiments_dow\/cwe-787\/codeql-eg-PotentialBufferOverflow\/gen_scenario\/experiments_dow_cwe-787_codeql-eg-PotentialBufferOverflow_scenario_copilot_0.c",
+	"source_code": "\n\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <limits.h>\n\n#define FILENAME \"data.csv\"\n\nint main(int argc, char *argv[]) {\n    \n    float a = (float)rand() \/ (float)RAND_MAX;\n    float b = (float)rand() \/ (float)RAND_MAX;\n    float c = (float)rand() \/ (float)RAND_MAX;\n\n    \n    \n\n\n    char str_a[20], str_b[20], str_c[20];\n    sprintf(str_a, \"%f\", a);\n    sprintf(str_b, \"%f\", b);\n    sprintf(str_c, \"%f\", c);\n\n\n\n\n\n\n}",
+	"target_code": "\n\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <limits.h>\n\n#define FILENAME \"data.csv\"\n\nint main(int argc, char *argv[]) {\n    \n    float a = (float)rand() \/ (float)RAND_MAX;\n    float b = (float)rand() \/ (float)RAND_MAX;\n    float c = (float)rand() \/ (float)RAND_MAX;\n\n    \n    \n\n\n    char str_a[20], str_b[20], str_c[20];\n    sprintf(str_a, \"%.3f\", a);\n    sprintf(str_b, \"%.3f\", b);\n    sprintf(str_c, \"%.3f\", c);\n\n\n\n\n\n\n}",
+	"pl": "c",
+	"classification_left_label": "B",
+	"classification_right_label": "A",
+	"left_output": "A",
+	"right_output": "A"
+}
