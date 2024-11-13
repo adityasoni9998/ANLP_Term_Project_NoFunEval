@@ -78,6 +78,8 @@ For maintainability and security subsets, first run src/evaluation.py for diffbl
 |  `tensor_parallel_size` | Default: `1` |
 | `swap_space` | The size (GiB) of CPU memory per GPU to use as swap space: Default: `12` |
 
+## Qualitative Examples
+The `error_analysis` directory contains full text of the examples mentioned in Appendix A of our report.
 ## GPU Hardware
 All our reproducibility experiments have been run using AWS g6e.xlarge instance which consists of a single NVIDIA L40S GPU with ~46GB memory.
 
