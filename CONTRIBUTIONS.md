@@ -1,12 +1,13 @@
-
+Contributions for assignment 4
 
 1. Aditya Bharat Soni (Andrew ID: adityabs)
-Reproducing results for DeepSeekCoder and CodeGemma. Error analysis. Literature review for a subsection 2.1.
+Generating inferences for all the LLMs across all approaches (for our proposed approach and majority of the baselines). Computing all the metrics for baselines and their analysis, and the majority vote method. Analysis - quantitative and qualitative.
+
 
 2. Shubham Rajnish Gandhi (Andrew ID: srgandhi)
-Reproducing results for CodeLlama. Error analysis. Literature review for subsection 2.2
+Researching and writing code for metrics for calculating modifications made when editing a piece of code. Writing code for making predictions and evaluating model performance based on modification scores of generations. Analysis - quantitative and qualitative. 
 
 3. Darsh Agarwal (Andrew ID: darsha)
-Reproducing results for Llama and Mistral.
+Creating graphs, setting up environment.
 
-Everyone contributed to report writing and environment setup.
+Everyone contributed to writing the report.

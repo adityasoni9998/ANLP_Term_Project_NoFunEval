@@ -1,8 +1,9 @@
 # Introduction
-This is the code and dataset used for Assignment-3 for the ANLP term project and is based on the paper ["NoFunEval: Funny How Code LMs Falter on Requirements Beyond Functional Correctness"](https://arxiv.org/abs/2401.15963). The original code source is [here](https://github.com/microsoft/NoFunEval/tree/main). We make minor edits to make the code work for the GPU hardware we have. We also have to modify the installation steps like mentioning the python version explicitly and installing vllm after installing all other libraries.
+This is the code and dataset used for the ANLP term project and is based on the paper ["NoFunEval: Funny How Code LMs Falter on Requirements Beyond Functional Correctness"](https://arxiv.org/abs/2401.15963). The original code source is [here](https://github.com/microsoft/NoFunEval/tree/main).
 
 ## Repository Contents
-1. [Datasets](#1-datasets): Runtime Efficiency, Maintainability, Latency, Resource Utilization, Security, HumanEvalClassify
+1. [Original Datasets](./datasets): The original NoFunEval Dataset.
+2. [Swapped Datasets](./datasets_swapped): Modified dataset where we replace the source code by the target code in input.
 2. [Evaluation scripts](#3-evaluation-scripts): Scripts to evaluate LMs by taking input from examples in NoFunEval and producing score@k scores for the metrics reported in the paper: DiffBleu, Average SpeedUp, CodeQL, CodeQL-DiffBleu.
 
 ## Datasets
@@ -37,13 +38,35 @@ pip install vllm
 ```
 
 # Generation
-### NoFunEdit
+### Original dataset
+For all models from HuggingFace we use the below command:
 ```console
 python3 src/nofunedit_generation.py --data_subset <subset from nofunedit: eg-latency> --model_path <model name from HF: eg-WizardLM/WizardCoder-15B-V1.0> --temperature <temperature to be set for model generation: eg-0> --max_new_tokens <maximum number of new tokens to be generated: eg-5192> --prompt <type of prompt to use from our dataset: eg-base_prompt> --num_samples <number of samples to be generated: eg-1> --precision <floating point format: eg-fp16> --batch_size <number of examples to send to llm engine at once: eg-1>
 ```
+For GPT-4o, we use the below command:
+```console
+python3 src/gpt4_nofun_edit.py --data_subset <subset from nofunedit: eg-latency> --temperature <temperature to be set for model generation: eg-0> --max_new_tokens <maximum number of new tokens to be generated: eg-5192> --prompt <type of prompt to use from our dataset: eg-base_prompt>
+```
+### Swapped Dataset
+For all models from HuggingFace we use the below command:
+```console
+python3 src/nofunedit_generation_swapped.py --data_subset <subset from nofunedit: eg-latency> --model_path <model name from HF: eg-WizardLM/WizardCoder-15B-V1.0> --temperature <temperature to be set for model generation: eg-0> --max_new_tokens <maximum number of new tokens to be generated: eg-5192> --prompt <type of prompt to use from our dataset: eg-base_prompt> --num_samples <number of samples to be generated: eg-1> --precision <floating point format: eg-fp16> --batch_size <number of examples to send to llm engine at once: eg-1>
+```
+
+For GPT-4o, we use the below command:
+```console
+python3 src/gpt4_nofun_edit_swapped.py --data_subset <subset from nofunedit: eg-latency> --temperature <temperature to be set for model generation: eg-0> --max_new_tokens <maximum number of new tokens to be generated: eg-5192> --prompt <type of prompt to use from our dataset: eg-base_prompt>
+```
+
 ### Classification
+For open-source models on HuggingFace, run:
 ```console
 python3 src/classification_generation.py --data_subset <subset from non_func or humanevalclassify: eg-latency> --model <model name from HF: eg-WizardLM/WizardCoder-15B-V1.0> --temperature <temperature to be set for model generation: eg-0> --max_new_tokens <maximum number of new tokens to be generated: eg-5192> --prompt <type of prompt to use from our dataset: eg-base_prompt> --precision <floating point format: eg-fp16> --batch_size <number of examples to send to llm engine at once: eg-1>
+```
+
+For GPT-4o, run:
+```console
+python3 src/gpt4_nofun_classify.py --data_subset <subset from non_func or humanevalclassify: eg-latency> --temperature <temperature to be set for model generation: eg-0> --max_new_tokens <maximum number of new tokens to be generated: eg-4> --prompt <type of prompt to use from our dataset: eg-base_prompt>
 ```
 # Evaluation Scripts
 
@@ -80,8 +103,12 @@ For maintainability and security subsets, first run src/evaluation.py for diffbl
 
 ## Qualitative Examples
 The `error_analysis` directory contains full text of the examples mentioned in Appendix A of our report.
+
 ## GPU Hardware
-All our reproducibility experiments have been run using AWS g6e.xlarge instance which consists of a single NVIDIA L40S GPU with ~46GB memory.
+All our reproducibility experiments have been run using AWS g6e.xlarge instance which consists of a single NVIDIA L40S GPU with ~46GB memory. For GPT-4o, we query LiteLLM proxy using the API credits for this semester.
+
+## Model outputs
+All the model outputs from original dataset are provided in generations_original (./generations_original) and all the model outputs from the swapped dataset are provided in generations_swapped (./generations_swapped).
 
 ## Code Reference
 The evaluation code for runtime efficiency has been derived from the [PIE codebase](https://github.com/madaan/pie-perf).
