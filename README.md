@@ -108,7 +108,7 @@ The `error_analysis` directory contains full text of the examples mentioned in A
 All our reproducibility experiments have been run using AWS g6e.xlarge instance which consists of a single NVIDIA L40S GPU with ~46GB memory. For GPT-4o, we query LiteLLM proxy using the API credits for this semester.
 
 ## Model outputs
-All the model outputs from original dataset are provided in generations_original (./generations_original) and all the model outputs from the swapped dataset are provided in generations_swapped (./generations_swapped).
+All the model outputs from original dataset are provided in [generations_original] (./generations_original) and all the model outputs from the swapped dataset are provided in [generations_swapped] (./generations_swapped).
 
 ## Code Reference
 The evaluation code for runtime efficiency has been derived from the [PIE codebase](https://github.com/madaan/pie-perf).
