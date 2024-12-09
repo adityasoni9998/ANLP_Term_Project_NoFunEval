@@ -70,7 +70,7 @@ python3 src/gpt4_nofun_classify.py --data_subset <subset from non_func or humane
 ```
 # Evaluation Scripts
 
-## Evaluation
+## Baseline Evaluation
 ```console
 python3 src/evaluation.py --data_subset <subset from nofunedit: eg-latency> --model_path <model name from HF: eg-WizardLM/WizardCoder-15B-V1.0> --prompt <type of prompt to use from our dataset: eg-base_prompt> --num_samples <number of samples to be generated: eg-1> --score_k <K values for score@k: eg-1,5,10,20> --metric <eval_metric to be used: eg-diffbleu>
 ```
@@ -100,6 +100,10 @@ For maintainability and security subsets, first run src/evaluation.py for diffbl
 | `precision` | Floating point format: Default: `fp16` |
 |  `tensor_parallel_size` | Default: `1` |
 | `swap_space` | The size (GiB) of CPU memory per GPU to use as swap space: Default: `12` |
+
+## Classification as Edit Evaluation
+
+The `src/evaluate_classification_as_edit.py` handles prediction and evaluation of our proposed approach.  
 
 ## Qualitative Examples
 The `error_analysis` directory contains full text of the examples mentioned in Appendix A of our report.
