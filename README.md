@@ -117,7 +117,7 @@ The `src/evaluate_classification_as_edit.py` handles prediction and evaluation o
 
 You will also need to change `generations_path_original`, `generations_path_swapped` and `results_path` appropriately.
 
-You will need to run the scripts as such - 
+You will need to run the script as such - 
 
 ```console
 python src/evaluate_classification_as_edit.py {ARGS}
