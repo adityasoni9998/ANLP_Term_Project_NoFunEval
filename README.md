@@ -105,6 +105,18 @@ For maintainability and security subsets, first run src/evaluation.py for diffbl
 
 The `src/evaluate_classification_as_edit.py` handles prediction and evaluation of our proposed approach.  
 
+### Parameters 
+
+| Argument | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--data_subset` | str | `"resource_util"` | Dataset subset to use: `latency`/`resource_util`/`runtime_efficiency`/`maintenance`/`security` |
+| `--model` | str | `"CodeLlama-7b-Instruct-hf"` | Name of model to use |
+| `--prompt` | str | `"coding_concepts"` | Prompt type: `base_prompt`/`coding_concepts`/`chain_of_thought`/`one_shot` |
+| `--num_samples` | int | 1 | Number of samples to generate |
+| `--metric` | str | `"code_bert_score"` | Evaluation metric: `git_diff`/`edit_distance`/`bleu`/`codebleu`/`bert_score`/`code_bert_score` |
+
+You will also need to change `generations_path_original`, `generations_path_swapped` and `results_path` appropriately.
+
 ## Qualitative Examples
 The `error_analysis` directory contains full text of the examples mentioned in Appendix A of our report.
 
