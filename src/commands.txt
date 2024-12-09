@@ -1,0 +1,43 @@
+python3 src/nofunedit_generation_swapped.py --data_subset latency --model_path deepseek-ai/deepseek-coder-6.7b-instruct --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset resource_util --model_path deepseek-ai/deepseek-coder-6.7b-instruct --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset runtime_efficiency --model_path deepseek-ai/deepseek-coder-6.7b-instruct --temperature 0 --max_new_tokens 1200 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset maintainability --model_path deepseek-ai/deepseek-coder-6.7b-instruct --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset security --model_path deepseek-ai/deepseek-coder-6.7b-instruct --temperature 0 --max_new_tokens 1500 --prompt chain_of_thought --num_samples 1 --precision bf16 --batch_size 1
+
+python3 src/nofunedit_generation_swapped.py --data_subset latency --model_path google/codegemma-1.1-7b-it --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset resource_util --model_path google/codegemma-1.1-7b-it --temperature 0 --max_new_tokens 5192 --prompt base_prompt --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset runtime_efficiency --model_path google/codegemma-1.1-7b-it --temperature 0 --max_new_tokens 1200 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset maintainability --model_path google/codegemma-1.1-7b-it --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset security --model_path google/codegemma-1.1-7b-it --temperature 0 --max_new_tokens 1200 --prompt one_shot --num_samples 1 --precision bf16 --batch_size 1
+
+python3 src/nofunedit_generation_swapped.py --data_subset latency --model_path codellama/CodeLlama-7b-Instruct-hf --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset resource_util --model_path codellama/CodeLlama-7b-Instruct-hf --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset runtime_efficiency --model_path codellama/CodeLlama-7b-Instruct-hf --temperature 0 --max_new_tokens 1200 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset maintainability --model_path codellama/CodeLlama-7b-Instruct-hf --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset security --model_path codellama/CodeLlama-7b-Instruct-hf --temperature 0 --max_new_tokens 1200 --prompt one_shot --num_samples 1 --precision bf16 --batch_size 1
+
+python3 src/nofunedit_generation_swapped.py --data_subset latency --model_path meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset resource_util --model_path meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset runtime_efficiency --model_path meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 1200 --prompt base_prompt --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset maintainability --model_path meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset security --model_path meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 1500 --prompt chain_of_thought --num_samples 1 --precision bf16 --batch_size 1
+
+python3 src/nofunedit_generation_swapped.py --data_subset latency --model_path mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset resource_util --model_path mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset runtime_efficiency --model_path mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 1200 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset maintainability --model_path mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 5192 --prompt coding_concepts --num_samples 1 --precision bf16 --batch_size 1
+python3 src/nofunedit_generation_swapped.py --data_subset security --model_path mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 1200 --prompt one_shot --num_samples 1 --precision bf16 --batch_size 1
+
+python3 src/classification_generation.py --data_subset latency --model meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+python3 src/classification_generation.py --data_subset resource_util --model meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+python3 src/classification_generation.py --data_subset runtime_efficiency --model meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+python3 src/classification_generation.py --data_subset maintainability --model meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+python3 src/classification_generation.py --data_subset security --model meta-llama/Meta-Llama-3-8B-Instruct --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+
+python3 src/classification_generation.py --data_subset latency --model mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+python3 src/classification_generation.py --data_subset resource_util --model mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+python3 src/classification_generation.py --data_subset runtime_efficiency --model mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+python3 src/classification_generation.py --data_subset maintainability --model mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+python3 src/classification_generation.py --data_subset security --model mistralai/Mistral-7B-Instruct-v0.1 --temperature 0 --max_new_tokens 4 --prompt base_prompt --precision bf16 --batch_size 1
+
+python3 src/evaluation.py --data_subset latency --model_path mistralai/Mistral-7B-Instruct-v0.1 --prompt base_prompt --num_samples 1 --score_k 1 --metric classification
