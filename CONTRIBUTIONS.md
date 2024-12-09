@@ -8,6 +8,6 @@ Generating inferences for all the LLMs across all approaches (for our proposed a
 Researching and writing code for metrics for calculating modifications made when editing a piece of code. Writing code for making predictions and evaluating model performance based on modification scores of generations. Analysis - quantitative and qualitative. 
 
 3. Darsh Agarwal (Andrew ID: darsha)
-Creating graphs, setting up environment.
+Creating graphs for result analysis. Setting up the environment. Generating inferences for two models in their best setting. Future Works, Limitations and Ethical Considerations.
 
 Everyone contributed to writing the report.
