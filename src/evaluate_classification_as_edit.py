@@ -96,7 +96,8 @@ if __name__ == '__main__':
     
     generations_path_original = os.path.join("/home/srgandhi/NoFunEval/generations_original", "edit", args.data_subset, args.model, args.prompt, f"{args.num_samples}_samples", "generated_outputs.jsonl")
     generations_path_swapped = os.path.join("/home/srgandhi/NoFunEval/generations_swapped", "edit", args.data_subset, args.model, args.prompt, f"{args.num_samples}_samples", "generated_outputs.jsonl")
-
+    results_path = os.path.join("/home/srgandhi/NoFunEval/results", "classification_as_edit", args.metric, args.data_subset, args.model, args.prompt, f"{args.num_samples}_samples")
+    
     # if not (os.path.isdir(os.path.join("/home/srgandhi/NoFunEval/generations_original", "edit", args.data_subset, args.model, args.prompt, f"{args.num_samples}_samples"))) and os.path.isdir(os.path.join("/home/srgandhi/NoFunEval/generations_swapped", "edit", args.data_subset, args.model, args.prompt, f"{args.num_samples}_samples")):
     #     sys.exit()
 
@@ -225,7 +226,6 @@ if __name__ == '__main__':
     print('Classification Accuracy: ', sum(predictions)/len(predictions))
     print(f'Unsupported Languages for metric {args.metric}: ', unsupported_langs)
     # sys.exit()
-    results_path = os.path.join("/home/srgandhi/NoFunEval/results", "classification_as_edit", args.metric, args.data_subset, args.model, args.prompt, f"{args.num_samples}_samples")
     os.makedirs(results_path, exist_ok=True)
 
     with open(f'{results_path}/accuracy.txt', 'w') as f:
